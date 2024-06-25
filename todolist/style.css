@@ -1,0 +1,94 @@
+
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+
+}
+body{
+    background: linear-gradient(135deg,#28509d, #390c44);
+    width:100%;
+    min-height: 100vh;
+    padding: 10px;
+}
+.todo{
+    width:100%;
+    max-width: 540px;
+    background-color: white;
+    margin:90px auto 20px;
+    padding: 20px 30px 70px;
+    border-radius: 15px;
+}
+.todo h2{
+    display: flex;
+    align-items: center;
+    margin: 20px;
+}
+.todo img{
+    margin-left: 10px;
+}
+.text{
+    display: flex;
+    align-items: center; 
+    justify-content: space-between;
+    margin-bottom: 20px;
+    background: rgb(177, 176, 176);
+    border-radius: 15px;
+    padding-left: 25px;
+}
+div input{
+    flex: 1;
+    border: none;
+    outline: none;
+    border-radius: 10px;
+    background: transparent;
+    font-size: larger;
+}
+
+button{
+    background: #fa7849;
+    outline: none;
+    border: none;
+    padding: 10px 50px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: larger;
+}
+button:hover{
+    transform: scale(0.95);
+}
+ul li{
+    list-style: none;
+    padding: 10px 10px 10px 40px;
+    margin-bottom: 10px;
+    user-select: none;
+    font-size: large;
+    cursor: pointer;
+    position: relative;
+}
+ul li::before{
+    content: " ";
+    position: absolute;
+    height:20px;
+    width:20px;
+    border-radius: 50%;
+    background-image:url("circle.png") ;
+    background-size: cover;
+    background-position: center;
+    left:10px;
+}
+ul li.checked{
+    text-decoration: line-through;
+}
+ul li.checked::before{
+    background-image: url("check.jpg");
+}
+span{
+    position: absolute;
+    right:10px
+}
+li span:hover{
+    /* transform: scale(1.25); */
+    background-color: rgb(191, 184, 184);
+}
